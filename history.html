@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="cssfiles/history.css">
+    <link rel="stylesheet" href="cssfiles/customer.css">
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="cssfiles/customers.css">
+    <link rel="stylesheet" href="cssfiles/Home.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="TopNav">
+        <div class="logo">
+           S.Bank
+        </div>
+        <div class="options">
+         <label>
+            <p >
+            
+               
+                <span><i  onclick="wed()" class="fa fa-plus">
+                   </i></span>me</p>
+         </label>
+         
+            <label for="check">
+                <i  onclick="access()" class="fa fa-bars"></i>
+            </label>
+        </div>
+        </div>
+     
+        <div class="histo">
+            <h2>
+                History
+            </h2>
+        </div>
+        <div class="History">
+            <div class="menus">
+                <a href="Home.html">Home</a>
+            <a href="customers.html">Users</a>
+            
+            <a onclick="wed()" style="cursor:pointer">My Account</a>
+            </div>
+            <button onclick="access()" style="cursor:pointer; padding:5px;background: none; border: 1px solid rgb(235, 224, 224); color:white;">close</button>
+        </div>
+        <main>
+            <div class="leftNav">
+                <div class="image">
+                    <div class="name">
+                        My Account
+                    </div>
+                    <div class="over">
+        
+                    </div>
+                    <img src="avator.png" alt="">
+        
+                </div>
+              <div class="contact">
+                <div class="email">
+                    <p>Email: <span>gravincekkowuor11@gmail.com</span> </p>
+                    <p><span>Balance:</span><span>2000</span></p>
+                </div>
+              </div>
+              <div class="buttons">
+                <button>Send</button>
+                <button>History</button>
+              </div>
+               </div>
+               <div class="users">
+                <div class="user">
+                    <div class="avator">
+                       <a href="customer.html">
+                        <div class="image">
+                            <img src="avator.png" alt="">
+                        </div>
+                       </a>
+                        <div class="cont">
+                            <div class="name">
+                                My Name
+                            </div>
+                            <div class="email">
+                              <span>mayemail</span><span>@gmail.com</span>
+                            </div>
+                        </div>
+                      
+                    </div>
+                    <div class="balance">
+                        2000
+                    </div>
+               </div>
+               </div>
+        </main>
+</body>
+<script >
+    const sho=document.querySelector(".leftNav");
+     function wed(){
+    sho.classList.toggle("switch");
+    console.log(sho);
+  
+    
+}
+const show=document.querySelector(".History");
+
+
+ function access(){
+    show.classList.toggle("here");
+    console.log(show);
+    
+}
+</script>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="cssfiles/customer.css">
+    <link rel="stylesheet" href="cssfiles/customers.css">
+    <link rel="stylesheet" href="cssfiles/Home.css">
+    <link rel="stylesheet" href="css/all.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>view user</title>
+</head>
+<body>
+   
+    <div class="TopNav">
+        <div class="logo">
+            S.Bank
+        </div>
+        <div class="options">
+         <label>
+            <p >
+            
+               
+                <span><i  onclick="wed()" class="fa fa-plus">
+                   </i></span>me</p>
+         </label>
+         
+            <label for="check">
+                <i  onclick="access()" class="fa fa-bars"></i>
+            </label>
+        </div>
+      
+    </div>
+    <div class="History">
+        <div class="menus">
+            <a href="Home.html">Home</a>
+        <a href="customers.html">Users</a>
+        <a href="History.html">History</a>
+        <a href="Home.html#transfer">My Account</a>
+        </div>
+        <button onclick="access()" style="cursor:pointer; padding:5px;background: none; border: 1px solid rgb(235, 224, 224); color:white;">close</button>
+    </div>
+    
+    <main>
+       
+        <div class="leftNav">
+        
+         <div class="image">
+             <div class="name">
+                 User_O
+             </div>
+             <div class="over">
+ 
+             </div>
+             <img src="avator.png" alt="">
+ 
+         </div>
+       <div class="contact">
+         <div class="email">
+             <p>Email: <span>user_O11@gmail.com</span> </p>
+             <p><span>Balance:</span><span>2000</span></p>
+         </div>
+       </div>
+       <div class="buttons">
+       <a href="Home.html#tranfer"> <button><i class="fa fa-share"></i>Send</button></a>
+            <a href="history.html">    <button><i class="fa fa-book"></i>History</button></a>
+       </div>
+        </div>
+       <div class="user_info">
+        <p>
+            User Profile
+        </p>
+        <div class="userHeader">
+            <div class="image">
+                  <img src="avator.png" alt="">
+            </div>
+            <div class="accounts">
+               <div class="name">
+               User_One
+               </div>
+               <div class="email">
+                userone@gmail.com
+               </div>
+            </div>
+            <div class="buttons">
+                <button id="btn" onclick="toggleShow()"><i class="fa fa-share"></i>Send</button>
+                <a href="history.html"><button><i class="fa fa-book"></i>History</button></a>
+                <a href="gmail.com"><button><i class="fa fa-envelope"></i>EMail
+                </button></a>
+            </div>
+        </div>
+                <div class="share hide" id="name">
+                    <div class="image">
+                        <img src="avator.png" alt="">
+                        <div class="vin">
+                         User_One
+                        </div>
+                        <div class="email">
+                         user_One@gmail.com
+                        </div>   
+                       
+                    </div>
+                   <div class="input_send">
+                    <p>
+                        enter aount to send
+                    </p>
+                    <div class="input">
+                        <div class="dolarSign">
+                            $
+                        </div>
+                        <input type="number" name="" id="" required>
+                    </div>
+                   </div>
+                  
+                   <button  onclick="success()">check out</button>
+                   <button style="background: #b60c0c;" onclick="toggleShow(),success()">cancel</button>
+                   
+                   <div class="success">
+                    
+                     <i onclick="success(),toggleShow() " class="fa fa-xmark"></i></button>
+                   
+                    <div class="middle">
+                        Transaction Success
+                    <i class="fa fa-check"></i>
+                    </div>
+                    
+                </div>
+                
+                </div>
+              
+               
+       </div>
+      
+     </main>
+     <script src="customer.js"></script>
+     </script>
+</body>
+</html>

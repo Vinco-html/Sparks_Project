@@ -1,0 +1,12 @@
+
+body{
+    display: flex;
+    flex-direction: column;
+
+}
+.histo{
+    width:100%;
+    background: #161c29;
+    padding-left: 20px;
+    
+}

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/fontawesome.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="cssfiles/Home.css">
+    <link rel="stylesheet" href="cssfiles/customer.css">
+    <link rel="stylesheet" href="cssfiles/customers.css">
+    <script src="banks.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="TopNav">
+        <div class="logo">
+           S.Bank
+        </div>
+        <div class="options">
+            <p onclick="wed()">
+                
+                <span><i class="fa fa-plus">
+                   </i></span>me
+            </p>
+       
+                <i onclick="access()" class="fa fa-bars"></i>
+          
+        </div>
+    </div>
+    <main>
+        <div class="leftNav" style="position:fixed;z-index: 99; top:0;">
+            <div class="image">
+                <div class="name">
+                    My Account
+                </div>
+                <div class="over">
+    
+                </div>
+                <img src="avator.png" alt="">
+    
+            </div>
+          <div class="contact">
+            <div class="email">
+                <p>Email: <span>gravincekkowuor11@gmail.com</span> </p>
+                <p><span>Balance:</span><span>2000</span></p>
+            </div>
+          </div>
+          <div class="buttons">
+            <a href="#transfer"><button>Send</button></a>
+            <button>History</button>
+          </div>
+           </div>
+    
+    <div class="History"style="top:10px;">
+        <div class="menus">
+       
+        <a href="customers.html">Users</a>
+        <a href="history.html">History</a>
+        <a onclick="wed()">My Account</a>
+        </div>
+        <button onclick="access()" style="cursor:pointer; padding:5px;background: none; border: 1px solid rgb(235, 224, 224); color:white;">close</button>
+    </div>
+    <div id="mainNav">
+
+        
+          <div id="menulinks">
+           <li class="menulink"><a href="Home.html"> <i class="fa fa-house"></i>Home</a></li>
+           <li class="menulink"> <a href="customers.html"> <i class="fa fa-user-group"></i>Customers</a></li>
+            <li class="menulink"><a href="#transfer"> <i class="fa fa-share"></i>Tranfer money</a></li>
+            <li class="menulink"><a href="history.html"> <i class="fa fa-book"></i>History</a></li>    <!-- <li>about Us</li>
+            <li>conatc me</li> -->
+
+    
+          </div>
+          <div class="over">
+            
+          </div>
+            <div class="pattern">
+
+            </div>
+            <div class="ourhome">
+               <div class="inner">
+                <p>Welcome Home, Send Money Across all countries to Users of your choice, We provide Simple, free and transparet money transfer</p>
+                <div class="getstarted" >
+                   <a href="#transfer">Get started</a>
+                </div>
+                <p class="bottom">
+                    -Simple -Honest -Transparent
+               </div>
+                </p>
+            </div>
+    </div>
+</main>
+<form action="connect.php" method="post">
+    <div class="transfer" id="transfer">
+        <div class="inner">
+            <p>Send Money everywher</p>
+        <form   class="inputs">
+            <div class="name" id="input">
+               
+                <input name="Name" type="text" required id="text">
+                <label for="text">Name</label>
+            </div>
+            <div class="div" id="input">
+           
+                <input name="email" type="text" required id="email">
+                <label for="email">email</label>
+            </div>
+           <div class="amount" id="input">
+           
+            <input name="amount" type="number" required id="amount">
+            <label for="amount">amount</label>
+           </div>
+          <div class="submit">
+            <input name="submit" type="submit"  id="submit" onclick="success()" value="send">
+           
+          </div>
+        </form>
+       <div class="bottom">
+        .Simple .honest .Transparent
+       </div>
+        </div>
+    </div>
+</form>
+    <div class="bottom_page">
+
+    </div>
+    <script>
+        const menu = document.getElementById("mainNav");
+Array.from(document.getElementsByClassName("menulink")).forEach((item, index)=> {
+    item.onmouseover = () =>
+    {
+        menu.dataset.activeIndex =index;
+        console.log("mouseOver");
+    }
+    
+});
+const show=document.querySelector(".History");
+
+
+ function access(){
+    show.classList.toggle("here");
+    console.log(show);
+    
+}
+const sho=document.querySelector(".leftNav");
+ function wed(){
+    sho.classList.toggle("switch");
+    console.log(sho);
+  
+    
+}
+    </script>
+   
+</body>
+</html>

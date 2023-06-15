@@ -1,0 +1,363 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    background: #1f1f20;
+    color: aliceblue;
+  
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    overflow-x: hidden;
+}
+.logo{
+    font-weight: bolder;
+}
+.pattern
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(rgb(24, 198, 24,0.1)9%,transparent 9%);
+    background-position: center;
+    background-size: 12vmin 12vmin;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    transition: opacity 0.8s ease,
+    background-size .8s ease;
+    
+}
+i{
+    margin: 10px;
+}
+
+
+.TopNav
+{
+    width: 100%;
+    top: 0;
+    position: sticky;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:0rem 1rem 0rem 1rem  ;
+    z-index: 990;
+    background:  #1f1f20;
+    }
+    .TopNav .logo
+    {
+        margin-left: 20px;
+        font-size:1.5rem;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+.options
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    margin-right: 20px;
+}
+.options p{
+    position: relative;
+    display: flex;
+    gap: 0px;
+    align-items: center;
+    overflow: hidden;
+
+}
+.options p .over{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+
+}
+.options p i{
+    cursor: pointer;
+   color: #000;
+   font-weight: 600;
+    border-radius: 50%;
+    margin:5px 2px 0px 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    background: url('boy.jpeg');
+    background-position: center;
+    background-size: cover;
+}
+.fa-bars{
+   border: 1px solid rgb(90, 84, 84);
+   padding: 0.4rem;
+   border-radius: 4px;
+   z-index: 999;
+   cursor: pointer;
+
+
+}
+.fa-bars:hover{
+    background: #383737;
+}
+#mainNav
+{
+  display: flex;
+  width: 100%;
+   position: relative;
+  height:100%;
+justify-content: space-between;
+align-items: center;
+  z-index: 2;
+  /* flex-wrap: wrap; */
+background: #000;
+}
+
+#mainNav li 
+{
+    
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 200px;
+    list-style: none;
+    font-size:23px;
+    margin: 2rem;
+    cursor: pointer;
+    padding: 1rem;
+    z-index: 2;
+    border-bottom: 1px solid rgb(50, 151, 176);
+    border-radius: 15px;
+   
+    
+    
+
+}
+#mainNav li a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #1fc294;
+}
+#menulinks
+{
+left: 0;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+    cursor: pointer;
+    z-index: 3;
+    width: max-content;
+    background: #011700;
+    align-self: flex-start;
+}
+.menulink{
+    background: #033a19;
+}
+#menulinks li:hover
+{
+  opacity:1;
+cursor: pointer;
+}
+#menulinks:hover > .menulink
+{
+    opacity:0.2;
+}
+#menulinks:hover > .menulink:hover{
+    opacity:1;
+}
+.menulink:hover ~ .pattern
+{
+
+    background-size: 11vmin 11vmin;
+    opacity: 0.5;
+    transition: ease .5s;
+}
+#mainNav .over{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: #000006
+    ;
+    opacity: 0.8;
+}
+#mainNav[data-active-index="0"] > .pattern {
+    background-position: 0% -105%;
+
+}
+#mainNav[data-active-index="1"] > .pattern {
+
+    background-position: center;
+    background: url('Homepage.jpg');
+    background-size: cover;
+    z-index: -1;
+}
+
+
+#mainNav[data-active-index="2"] > .pattern {
+    background-position:center;
+    background: url('piggy-bank-2889046.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+#mainNav[data-active-index="3"] > .pattern {
+    background-position:center;
+    background-size: cover;
+    background: url('History.png');
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+.getstarted{
+    margin:10px;
+     border:1px solid #127e94;
+      padding:5px;
+      width: 100%;
+      border-radius: 5px;
+      background: #033a19;
+}
+.getstarted a{
+    color:#1fc294 ;
+    text-decoration: none;
+    
+}
+.getstarted:hover{
+    background: #b4d9e0;
+    cursor: pointer;
+}
+.getstarted:hover>a{
+    color: #011700;
+}
+.ourhome
+{
+    width: max-content;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   color: #1f1f20;
+    z-index: 4;
+    /* position: absolute; */
+}
+
+.bottom{
+    font-size: 13px;
+   justify-self:flex-end;
+
+   color: rgb(71, 90, 44);
+}
+.ourhome .inner{
+    padding: 20px;
+    font-size: 23px;
+    background: #044314;
+    border-radius: 20px;
+    margin: 10px;
+    display: flex;
+    max-width: 400px;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    color:#cae1db;
+}
+.transfer{
+    width: 100%;
+    height: 100%;
+    background: #000;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.transfer input{
+    position: relative;
+    width: 100%;
+    height: 40px;
+    outline: none;
+    border: none;
+    font-size: larger;
+    background: transparent;
+    color: white;
+}
+.transfer #input{
+    width: 100%;
+    position: relative;
+    background: #000;
+    display: flex;
+    border: 1.3px solid rgb(8, 82, 8);
+    box-shadow: green 1px 0px 1px 1px;
+    border-radius: 3px;
+    align-items: center;
+
+}
+.transfer #input label{
+    margin: 10px;
+    
+    position: absolute;
+}
+input:focus~label{
+    transform: translateY(-40px);
+    font-size: 12px;
+}
+#email:valid~label{
+    transform: translateY(-40px);
+}
+input:valid~label{
+    transform: translateY(-40px);
+}
+.transfer .inner{
+   width: 400px;
+   height: 500px;
+   align-items: center;
+   justify-content: space-between;
+   display: flex;
+   flex-direction: column;
+   background: #011700;
+   padding: 20px;
+   gap: 1rem;
+
+}
+#submit{
+     background: #000;
+     border-radius: 9px;
+     cursor: pointer;
+}
+#submit:hover{
+   background: #1fc294;
+}
+.transfer .inner .inputs{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  
+}
+.container
+{
+    display: flex;
+ align-items: center;
+ justify-content: center;
+    width: 100%;
+    height: 100vh;
+  position: relative;
+    background: #dc0c0c;
+    z-index: 50;
+}
+@media screen and (max-width:400px)
+{
+  .options p{
+    display: none;
+  }
+}
+@media screen and (max-width:550px)
+{
+    .ourhome{
+        display: none;
+    }
+  #mainNav{
+  flex-wrap: wrap;
+  }
+}

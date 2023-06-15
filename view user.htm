@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="view%20user_files/customer.css">
+    <link rel="stylesheet" href="view%20user_files/customers.css">
+    <link rel="stylesheet" href="view%20user_files/Home.css">
+    <link rel="stylesheet" href="view%20user_files/all.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>view user</title>
+</head>
+<body>
+   
+    <div class="TopNav">
+        <div class="logo">
+            S.Bank
+        </div>
+        <div class="options">
+         <label>
+            <p>
+            
+               
+                <span><i onclick="wed()" class="fa fa-plus">
+                   </i></span>me</p>
+         </label>
+         
+            <label for="check">
+                <i onclick="access()" class="fa fa-bars"></i>
+            </label>
+        </div>
+      
+    </div>
+    <div class="History">
+        <div class="menus">
+            <a href="http://127.0.0.1:5500/Home.html">Home</a>
+        <a href="http://127.0.0.1:5500/customers.html">Users</a>
+        <a href="http://127.0.0.1:5500/History.html">History</a>
+        <a href="http://127.0.0.1:5500/Home.html#transfer">My Account</a>
+        </div>
+        <button onclick="access()" style="cursor:pointer; padding:5px;background: none; border: 1px solid rgb(235, 224, 224); color:white;">close</button>
+    </div>
+    
+    <main>
+       
+        <div class="leftNav">
+        
+         <div class="image">
+             <div class="name">
+                 My Account
+             </div>
+             <div class="over">
+ 
+             </div>
+             <img src="view%20user_files/avator.png" alt="">
+ 
+         </div>
+       <div class="contact">
+         <div class="email">
+             <p>Email: <span>gravincekkowuor11@gmail.com</span> </p>
+             <p><span>Balance:</span><span>2000</span></p>
+         </div>
+       </div>
+       <div class="buttons">
+       <a href="http://127.0.0.1:5500/Home#tranfer"> <button><i class="fa fa-share"></i>Send</button></a>
+            <a href="http://127.0.0.1:5500/history.html">    <button><i class="fa fa-book"></i>History</button></a>
+       </div>
+        </div>
+       <div class="user_info">
+        <p>
+            User Profile
+        </p>
+        <div class="userHeader">
+            <div class="image">
+                  <img src="view%20user_files/avator.png" alt="">
+            </div>
+            <div class="accounts">
+               <div class="name">
+               User_One
+               </div>
+               <div class="email">
+                userone@gmail.com
+               </div>
+            </div>
+            <div class="buttons">
+                <button id="btn" onclick="toggleShow()"><i class="fa fa-share"></i>Send</button>
+                <button><i class="fa fa-book"></i>History</button>
+                <button><i class="fa fa-envelope"></i>EMail
+                </button>
+            </div>
+        </div>
+                <div class="share hide" id="name">
+                    <div class="image">
+                        <img src="view%20user_files/avator.png" alt="">
+                        <div class="vin">
+                         User_O
+                        </div>
+                        <div class="email">
+                         user_O11@gmail.com
+                        </div>   
+                       
+                    </div>
+                   <div class="input_send">
+                    <p>
+                        enter aount to send
+                    </p>
+                    <div class="input">
+                        <div class="dolarSign">
+                            $
+                        </div>
+                        <input type="number" name="" id="" required="" value="9">
+                    </div>
+                   </div>
+                  
+                   <button onclick="success()">check out</button>
+                   <button style="background: #b60c0c;" onclick="toggleShow()">cancel</button>
+                   
+                   <div class="success">
+                    
+                     <i onclick="success(),toggleShow() " class="fa fa-xmark"></i>
+                   
+                    <div class="middle">
+                        Transaction Success
+                    <i class="fa fa-check"></i>
+                    </div>
+                    
+                </div>
+                
+                </div>
+              
+               
+       </div>
+      
+     </main>
+     <script src="view%20user_files/customer.js"></script>
+     
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+</body></html>
